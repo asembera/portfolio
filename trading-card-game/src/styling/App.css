@@ -1,0 +1,171 @@
+:root {
+  --primary: #1d242b;
+  --primary-styled: radial-gradient(#aad8d3, #687980, #1d242b);
+  --secondary: #fafafa;
+  --border-radius: 2%;
+  --bottom-distance: 30%;
+  --card-width: 150px;
+  --card-height: 200px;
+}
+
+body {
+  background-color: #f9e0ae;
+  overflow: hidden;
+}
+
+.deck {
+  position: fixed;
+  bottom: var(--bottom-distance);
+  right: 20%;
+}
+.discard-pile {
+  position: fixed;
+  background-color: var(--primary);
+
+  right: 20%;
+  bottom: 60%;
+}
+
+@keyframes draw {
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+.hand {
+  position: fixed;
+  bottom: var(--bottom-distance);
+}
+.hand:hover {
+  transform: translateY(-80px);
+}
+.one {
+  right: 70%;
+}
+.two {
+  right: 75%;
+}
+.three {
+  right: 80%;
+}
+.four {
+  right: 85%;
+}
+.five {
+  right: 90%;
+}
+
+.card-body {
+  position: absolute;
+  transition: transform 500ms;
+  transform-style: preserve-3d;
+}
+
+.played-card {
+  position: fixed;
+  left: 20%;
+  bottom: 65%;
+}
+.slot-one {
+  /* transform: rotateZ(0.25turn); */
+  right: 70%;
+}
+.slot-two {
+  right: 55%;
+}
+
+.card-body:hover {
+  /* transform: translateY(-80px); */
+  /* transform: rotateY(180deg) translateX(-150px); */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: var(--card-height);
+  width: var(--card-width);
+  max-height: var(--card-height);
+  max-width: var(--card-width);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  background-image: var(--primary-styled);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 2px;
+}
+
+.flip {
+  transform: rotateY(0.5turn);
+}
+.flip:hover {
+  /* transform: rotateY(1turn) translateX(-150px); */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-art {
+  background-image: url("forest-web.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius);
+  margin: 10px 10px 0 10px;
+  width: 90%;
+  height: 50%;
+  border-style: groove;
+  border-width: 2px;
+  box-shadow: 0.5px 0.5 0.5px 0.5;
+}
+
+.card-description {
+  background-color: var(--secondary);
+  border-radius: var(--border-radius);
+  margin: 0 10px 10px 10px;
+  width: 90%;
+  height: 30%;
+  bottom: 20px;
+  border-style: groove;
+  border-width: 2px;
+  box-shadow: 0.5px 0.5 0.5px 0.5 black;
+}
+
+.card-attributes {
+  background-color: var(--secondary);
+  border-radius: var(--border-radius);
+  margin: 5px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  border-style: groove;
+  border-width: 2px;
+  box-shadow: 0.5px 0.5 0.5px 0.5;
+}
+
+.back-content {
+  width: 95%;
+  height: 95%;
+  position: relative;
+  /* background: #766161; */
+  background: radial-gradient(#687980, #766161, #1d242b);
+  margin: auto;
+  border-radius: var(--border-radius);
+  border-style: groove;
+  border-width: 5px;
+}
+
+/* GOOGLE ICON STYLES */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
