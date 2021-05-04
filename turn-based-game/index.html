@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Game</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+
+</head>
+
+
+<body >
+    
+    <div class="teams">
+        <img class ="arrow" src="images/arrow-removebg-preview.png" alt="">
+        <img class = "saber" src="images/saber-removebg-preview.png" alt="">
+        <div class="position">
+            <div class="cube"> 
+                <div class="side front">
+                    <div class="player one " data-player-one>
+                        
+                        <span class="health-one player-one"><span class="health-two"></span></span>
+                    </div>
+                </div>
+                    
+                <div class="side back">
+                    <div class="player two" data-player-two>
+                        <span class="health-one player-two"><span class="health-two"></span></span>
+                    </div>
+                </div>
+                <div class="side right">                </div>
+                <div class="side left"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menu">
+        <button  class="btn move-choice" data-btn>Choose Move</button>
+        <div class="dropdown-content" data-drop-down>
+            <button  class="btn move-btn" data-btn-bow>Bow</button>
+            <button  class="btn move-btn" data-btn-saber>Saber</button>
+            <button  class="btn move-btn" data-btn-route>Route</button>
+            <button  class="btn move-btn" data-btn-heal>Heal</button>
+            
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+
+</html>
