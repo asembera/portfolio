@@ -13,7 +13,16 @@ const Payments = (props) => {
         token={(token) => props.handleToken(token)}
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
-        <button className="btn">Add Credits</button>
+        <button
+          onClick={() =>
+            alert(
+              "NOTE: Do not put in real information. Use 4242 4242 4242 4242, any date in the future, and any security code to test the payment system out."
+            )
+          }
+          className="btn"
+        >
+          Add Credits
+        </button>
       </StripeCheckout>
     </div>
   );
